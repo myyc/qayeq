@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/dev/myyc/qayeq">
+    <file preprocess="xml-stripblanks">ui/window.ui</file>
+    <file preprocess="xml-stripblanks">ui/preferences.ui</file>
+    <file preprocess="xml-stripblanks">ui/shortcuts.ui</file>
+    <file>icons/dev.myyc.qayeq.svg</file>
+    <file>style.css</file>
+    <!-- Content blocker filter lists (Safari Content Blocker JSON format) -->
+    <file compressed="true">filters/easylist.json</file>
+    <file compressed="true">filters/easyprivacy.json</file>
+  </gresource>
+</gresources>

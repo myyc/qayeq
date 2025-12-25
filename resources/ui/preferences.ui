@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <requires lib="libadwaita" version="1.0"/>
+  <template class="QayeqPreferencesWindow" parent="AdwPreferencesWindow">
+    <property name="title" translatable="yes">Preferences</property>
+    <property name="default-width">600</property>
+    <property name="default-height">500</property>
+    <property name="search-enabled">false</property>
+    <child>
+      <object class="AdwPreferencesPage">
+        <property name="title" translatable="yes">General</property>
+        <property name="icon-name">preferences-system-symbolic</property>
+        <!-- Search Group -->
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Search</property>
+            <child>
+              <object class="AdwComboRow" id="search_engine_row">
+                <property name="title" translatable="yes">Search Engine</property>
+                <property name="subtitle" translatable="yes">Default search engine for the URL bar</property>
+                <property name="model">
+                  <object class="GtkStringList">
+                    <items>
+                      <item translatable="yes">DuckDuckGo</item>
+                      <item translatable="yes">Google</item>
+                      <item translatable="yes">Bing</item>
+                      <item translatable="yes">Ecosia</item>
+                      <item translatable="yes">Custom</item>
+                    </items>
+                  </object>
+                </property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwEntryRow" id="custom_search_row">
+                <property name="title" translatable="yes">Custom Search URL</property>
+                <property name="visible">false</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSwitchRow" id="search_suggestions_row">
+                <property name="title" translatable="yes">Search Suggestions</property>
+                <property name="subtitle" translatable="yes">Show suggestions from DuckDuckGo while typing</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <!-- Startup Group -->
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Startup</property>
+            <child>
+              <object class="AdwEntryRow" id="homepage_row">
+                <property name="title" translatable="yes">Homepage</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwEntryRow" id="new_tab_row">
+                <property name="title" translatable="yes">New Tab Page</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSwitchRow" id="restore_session_row">
+                <property name="title" translatable="yes">Restore Previous Session</property>
+                <property name="subtitle" translatable="yes">Reopen tabs from last session on startup</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

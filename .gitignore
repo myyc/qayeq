@@ -1,0 +1,24 @@
+# Rust build artifacts
+/target/
+/build/
+
+# Flatpak build artifacts
+/.flatpak-builder/
+/repo/
+/build-dir/
+*.flatpak
+
+# Claude Code
+/.claude/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+

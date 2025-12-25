@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=qayeq
+Comment=A GNOME web browser
+Exec=qayeq %u
+Icon=dev.myyc.qayeq
+Terminal=false
+Type=Application
+Categories=Network;WebBrowser;GTK;
+Keywords=web;browser;internet;
+MimeType=text/html;text/xml;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;
+StartupNotify=true
+X-GNOME-UsesNotifications=true

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <object class="GtkShortcutsWindow" id="shortcuts_window">
+    <property name="modal">true</property>
+    <child>
+      <object class="GtkShortcutsSection">
+        <property name="section-name">shortcuts</property>
+        <property name="max-height">12</property>
+        <!-- Navigation -->
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="title" translatable="yes">Navigation</property>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes">Go back</property>
+                <property name="accelerator">&lt;Alt&gt;Left</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes">Go forward</property>
+                <property name="accelerator">&lt;Alt&gt;Right</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes">Reload page</property>
+                <property name="accelerator">&lt;Control&gt;r F5</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes">Focus URL bar</property>
+                <property name="accelerator">&lt;Control&gt;l</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <!-- Tabs -->
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="title" translatable="yes">Tabs</property>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes">New tab</property>
+                <property name="accelerator">&lt;Control&gt;t</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes">Close tab</property>
+                <property name="accelerator">&lt;Control&gt;w</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes">Reopen closed tab</property>
+                <property name="accelerator">&lt;Control&gt;&lt;Shift&gt;t</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes">New window</property>
+                <property name="accelerator">&lt;Control&gt;&lt;Shift&gt;n</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <!-- Containers -->
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="title" translatable="yes">Container Tabs</property>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes">New Personal tab</property>
+                <property name="accelerator">&lt;Control&gt;&lt;Shift&gt;1</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes">New Work tab</property>
+                <property name="accelerator">&lt;Control&gt;&lt;Shift&gt;2</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes">New Shopping tab</property>
+                <property name="accelerator">&lt;Control&gt;&lt;Shift&gt;3</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes">New Banking tab</property>
+                <property name="accelerator">&lt;Control&gt;&lt;Shift&gt;4</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <!-- Interface -->
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="title" translatable="yes">Interface</property>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes">Toggle toolbar</property>
+                <property name="accelerator">Escape</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes">Toggle tab sidebar</property>
+                <property name="accelerator">F1</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes">Toggle tab sidebar (double-tap Shift)</property>
+                <property name="shortcut-type">gesture</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes">Preferences</property>
+                <property name="accelerator">&lt;Control&gt;comma</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <!-- General -->
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="title" translatable="yes">General</property>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes">Quit</property>
+                <property name="accelerator">&lt;Control&gt;q</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

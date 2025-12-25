@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="dev.myyc.qayeq" path="/dev/myyc/qayeq/">
+    <key name="search-engine" type="s">
+      <default>'duckduckgo'</default>
+      <summary>Default search engine</summary>
+      <description>The search engine used when entering search terms in the URL bar.</description>
+    </key>
+    <key name="homepage" type="s">
+      <default>'about:blank'</default>
+      <summary>Homepage URL</summary>
+      <description>The URL to load when opening a new window or clicking the home button.</description>
+    </key>
+    <key name="new-tab-url" type="s">
+      <default>'about:blank'</default>
+      <summary>New tab page URL</summary>
+      <description>The URL to load when opening a new tab.</description>
+    </key>
+    <key name="sidebar-width" type="i">
+      <default>250</default>
+      <range min="180" max="400"/>
+      <summary>Sidebar width</summary>
+      <description>Width of the vertical tabs sidebar in pixels.</description>
+    </key>
+    <key name="restore-session" type="b">
+      <default>false</default>
+      <summary>Restore session on startup</summary>
+      <description>Whether to restore tabs from the previous session when starting the browser.</description>
+    </key>
+    <key name="window-width" type="i">
+      <default>1200</default>
+      <summary>Window width</summary>
+      <description>Default window width in pixels.</description>
+    </key>
+    <key name="window-height" type="i">
+      <default>800</default>
+      <summary>Window height</summary>
+      <description>Default window height in pixels.</description>
+    </key>
+    <key name="window-maximized" type="b">
+      <default>false</default>
+      <summary>Window maximized</summary>
+      <description>Whether the window should start maximized.</description>
+    </key>
+    <key name="search-suggestions-enabled" type="b">
+      <default>true</default>
+      <summary>Enable search suggestions</summary>
+      <description>Show search suggestions from DuckDuckGo while typing in the URL bar.</description>
+    </key>
+    <key name="custom-search-url" type="s">
+      <default>''</default>
+      <summary>Custom search engine URL</summary>
+      <description>URL template for custom search engine. Use {} as the query placeholder.</description>
+    </key>
+  </schema>
+</schemalist>

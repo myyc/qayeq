@@ -1,0 +1,58 @@
+{
+    "app-id": "dev.myyc.qayeq",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "49",
+    "sdk": "org.gnome.Sdk",
+    "sdk-extensions": [
+        "org.freedesktop.Sdk.Extension.rust-stable"
+    ],
+    "command": "qayeq",
+    "finish-args": [
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--socket=pulseaudio",
+        "--device=dri",
+        "--filesystem=xdg-download",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.freedesktop.secrets",
+        "--talk-name=org.freedesktop.FileManager1",
+        "--system-talk-name=org.freedesktop.GeoClue2"
+    ],
+    "build-options": {
+        "append-path": "/usr/lib/sdk/rust-stable/bin",
+        "build-args": ["--share=network"],
+        "env": {
+            "RUST_BACKTRACE": "1",
+            "CARGO_HOME": "/run/build/qayeq/cargo"
+        }
+    },
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "*.a",
+        "*.la"
+    ],
+    "modules": [
+        {
+            "name": "qayeq",
+            "buildsystem": "simple",
+            "build-commands": [
+                "cargo fetch --manifest-path Cargo.toml --verbose",
+                "cargo build --release --verbose",
+                "install -Dm755 target/release/qayeq /app/bin/qayeq",
+                "install -Dm644 data/dev.myyc.qayeq.desktop /app/share/applications/dev.myyc.qayeq.desktop",
+                "install -Dm644 data/dev.myyc.qayeq.gschema.xml /app/share/glib-2.0/schemas/dev.myyc.qayeq.gschema.xml",
+                "install -Dm644 data/icons/hicolor/scalable/apps/dev.myyc.qayeq.svg /app/share/icons/hicolor/scalable/apps/dev.myyc.qayeq.svg",
+                "glib-compile-schemas /app/share/glib-2.0/schemas"
+            ],
+            "sources": [
+                {
+                    "type": "dir",
+                    "path": "."
+                }
+            ]
+        }
+    ]
+}

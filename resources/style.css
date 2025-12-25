@@ -1,0 +1,248 @@
+/* Qayeq Browser Styles - Floating Overlays */
+
+/* Floating sidebar panel */
+.floating-sidebar {
+    background: @window_bg_color;
+    border-radius: 12px;
+    border: 1px solid alpha(white, 0.15);
+    box-shadow: 0 4px 12px alpha(black, 0.3), 0 1px 3px alpha(black, 0.2);
+    padding: 4px;
+    transition: opacity 150ms ease, transform 150ms ease;
+}
+
+/* Floating toolbar */
+.floating-toolbar {
+    background: @window_bg_color;
+    border-radius: 12px;
+    border: 1px solid alpha(white, 0.15);
+    box-shadow: 0 4px 12px alpha(black, 0.3), 0 1px 3px alpha(black, 0.2);
+    padding: 4px;
+    transition: opacity 150ms ease, transform 150ms ease;
+}
+
+/* Hidden state for overlays - use opacity and let code handle can-target */
+.floating-sidebar.hidden,
+.floating-toolbar.hidden {
+    opacity: 0;
+}
+
+.floating-sidebar .navigation-sidebar {
+    background: transparent;
+    padding: 0;
+}
+
+.floating-sidebar .navigation-sidebar > row {
+    padding: 0;
+    margin: 0;
+}
+
+.floating-sidebar .navigation-sidebar > row.active {
+    background: @theme_selected_bg_color;
+    border-radius: 8px;
+}
+
+/* Tab row - inner radius = outer (12px) - padding (4px) = 8px */
+.tab-row {
+    padding: 0;
+    margin: 0;
+    border-radius: 8px;
+    background: transparent;
+    transition: background 100ms ease;
+}
+
+.tab-row:hover {
+    background: alpha(@theme_fg_color, 0.1);
+}
+
+.tab-row.active {
+    background: @theme_selected_bg_color;
+}
+
+/* Favicon container */
+.tab-row .tab-favicon {
+    min-width: 20px;
+    min-height: 20px;
+}
+
+/* Title - shown when sidebar is expanded */
+.tab-row .tab-title {
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+/* Close button */
+.tab-row .tab-close {
+    min-width: 18px;
+    min-height: 18px;
+    padding: 0;
+    margin: 0;
+    opacity: 0.7;
+}
+
+.tab-row .tab-close:hover {
+    opacity: 1;
+}
+
+/* New tab button */
+.new-tab-btn {
+    min-width: 16px;
+    min-height: 16px;
+    padding: 0;
+    margin: 0;
+    border-radius: 8px;
+}
+
+/* Scrollbar styling */
+.floating-sidebar scrollbar {
+    opacity: 0;
+    background: transparent;
+}
+
+.floating-sidebar:hover scrollbar {
+    opacity: 1;
+}
+
+/* URL bar progress indicator - overlays at bottom of entry */
+.url-progress {
+    min-height: 3px;
+    margin: 0 1px 1px 1px;
+    background: transparent;
+}
+
+.url-progress trough {
+    min-height: 3px;
+    background: transparent;
+    border-radius: 0 0 4px 4px;
+}
+
+.url-progress trough progress {
+    min-height: 3px;
+    background: @accent_bg_color;
+    border-radius: 0 0 4px 4px;
+}
+
+/* Completion list scrollbar - only show when hovering and scrollable */
+.floating-toolbar scrolledwindow scrollbar {
+    opacity: 0;
+    transition: opacity 200ms ease;
+}
+
+.floating-toolbar scrolledwindow:hover scrollbar {
+    opacity: 1;
+}
+
+/* Completion list (integrated in toolbar) */
+.completion-list {
+    background: transparent;
+    padding: 0;
+    margin-top: 4px;
+}
+
+.completion-list > row {
+    padding: 4px 8px;
+    margin: 0;
+    border-radius: 8px;
+}
+
+.completion-list > row:hover {
+    background: alpha(@theme_fg_color, 0.1);
+}
+
+.completion-list > row:selected {
+    background: @theme_selected_bg_color;
+}
+
+/* Container indicator - colored bar showing which container a tab belongs to */
+.container-indicator {
+    min-height: 16px;
+    border-radius: 2px;
+    background: #888888;
+}
+
+/* Container colors - matching config.rs DEFAULT_CONTAINERS */
+.container-indicator.container-personal {
+    background: #33d17a;
+}
+
+.container-indicator.container-work {
+    background: #3584e4;
+}
+
+.container-indicator.container-shopping {
+    background: #ff7800;
+}
+
+.container-indicator.container-banking {
+    background: #9141ac;
+}
+
+/* Download button */
+.download-button {
+    min-width: 24px;
+    min-height: 24px;
+}
+
+/* Progress bar on download button - thin bar at bottom */
+.download-button-progress {
+    min-height: 3px;
+    max-height: 3px;
+    min-width: 24px;
+    max-width: 24px;
+    transform: translateY(2px);
+}
+
+.download-button-progress trough {
+    min-height: 3px;
+    max-height: 3px;
+    min-width: 24px;
+    max-width: 24px;
+    background: alpha(@theme_fg_color, 0.2);
+    border-radius: 1px;
+}
+
+.download-button-progress trough progress {
+    min-height: 3px;
+    max-height: 3px;
+    background: @accent_bg_color;
+    border-radius: 1px;
+}
+
+/* Download spinner overlay - small spinner in bottom-right corner */
+.download-spinner {
+    min-width: 12px;
+    min-height: 12px;
+    margin: 2px;
+}
+
+/* Download popover */
+.download-popover {
+    padding: 8px;
+}
+
+.download-popover .heading {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Download row in popover - padding matches boxed-list row styling */
+.download-row {
+    padding: 4px 8px;
+    margin: 0;
+}
+
+/* Download progress bar */
+.download-progress {
+    min-height: 4px;
+}
+
+.download-progress trough {
+    min-height: 4px;
+    background: alpha(@theme_fg_color, 0.1);
+    border-radius: 2px;
+}
+
+.download-progress trough progress {
+    min-height: 4px;
+    background: @accent_bg_color;
+    border-radius: 2px;
+}
