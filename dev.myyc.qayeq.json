@@ -44,7 +44,11 @@
                 "install -Dm755 target/release/qayeq /app/bin/qayeq",
                 "install -Dm644 data/dev.myyc.qayeq.desktop /app/share/applications/dev.myyc.qayeq.desktop",
                 "install -Dm644 data/dev.myyc.qayeq.gschema.xml /app/share/glib-2.0/schemas/dev.myyc.qayeq.gschema.xml",
-                "install -Dm644 data/icons/hicolor/scalable/apps/dev.myyc.qayeq.svg /app/share/icons/hicolor/scalable/apps/dev.myyc.qayeq.svg",
+                "install -Dm644 data/icons/hicolor/48x48/apps/dev.myyc.qayeq.png /app/share/icons/hicolor/48x48/apps/dev.myyc.qayeq.png",
+                "install -Dm644 data/icons/hicolor/64x64/apps/dev.myyc.qayeq.png /app/share/icons/hicolor/64x64/apps/dev.myyc.qayeq.png",
+                "install -Dm644 data/icons/hicolor/128x128/apps/dev.myyc.qayeq.png /app/share/icons/hicolor/128x128/apps/dev.myyc.qayeq.png",
+                "install -Dm644 data/icons/hicolor/256x256/apps/dev.myyc.qayeq.png /app/share/icons/hicolor/256x256/apps/dev.myyc.qayeq.png",
+                "install -Dm644 data/icons/hicolor/512x512/apps/dev.myyc.qayeq.png /app/share/icons/hicolor/512x512/apps/dev.myyc.qayeq.png",
                 "glib-compile-schemas /app/share/glib-2.0/schemas"
             ],
             "sources": [
