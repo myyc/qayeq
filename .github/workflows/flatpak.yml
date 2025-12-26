@@ -10,7 +10,7 @@ on:
 jobs:
   flatpak:
     name: Build Flatpak
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
@@ -18,11 +18,8 @@ jobs:
 
       - name: Install Flatpak and flatpak-builder
         run: |
-          if ! command -v flatpak-builder &> /dev/null; then
-            sudo dnf install -y flatpak flatpak-builder || \
-            sudo apt-get update && sudo apt-get install -y flatpak flatpak-builder || \
-            sudo pacman -S --noconfirm flatpak flatpak-builder
-          fi
+          sudo apt-get update
+          sudo apt-get install -y flatpak flatpak-builder
 
       - name: Add Flathub repo
         run: |
