@@ -9,5 +9,8 @@
     <!-- Content blocker filter lists (Safari Content Blocker JSON format) -->
     <file compressed="true">filters/easylist.json</file>
     <file compressed="true">filters/easyprivacy.json</file>
+    <file compressed="true">filters/youtube-ads.json</file>
+    <!-- uBlock Origin style scriptlet filters -->
+    <file compressed="true">filters/youtube-scriptlets.txt</file>
   </gresource>
 </gresources>

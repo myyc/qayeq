@@ -1,0 +1,22 @@
+! YouTube Ad Blocking Scriptlets for qayeq
+! Based on uBlock Origin filters
+! Last updated: 2024-12-27
+
+! Intercept when ytInitialPlayerResponse is SET by inline script and prune ad data
+www.youtube.com##+js(prune-property-on-set, ytInitialPlayerResponse, adPlacements playerAds adSlots)
+www.youtube.com##+js(prune-property-on-set, ytInitialData, adPlacements playerAds adSlots)
+
+! Intercept and prune ad data from YouTube API responses
+www.youtube.com##+js(prune-fetch-response, adPlacements playerAds adSlots)
+
+! Prune ad data from JSON.parse results
+youtube.com,m.youtube.com,music.youtube.com,www.youtube.com##+js(json-prune, adPlacements playerAds adSlots, playerResponse)
+
+! Prevent ad-related fetch requests
+youtube.com,m.youtube.com,music.youtube.com,www.youtube.com##+js(prevent-fetch, pagead)
+youtube.com,m.youtube.com,music.youtube.com,www.youtube.com##+js(prevent-fetch, doubleclick)
+youtube.com,m.youtube.com,music.youtube.com,www.youtube.com##+js(prevent-fetch, googlesyndication)
+
+! Prevent ad-related XHR requests
+youtube.com,m.youtube.com,music.youtube.com,www.youtube.com##+js(prevent-xhr, pagead)
+youtube.com,m.youtube.com,music.youtube.com,www.youtube.com##+js(prevent-xhr, doubleclick)
