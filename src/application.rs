@@ -83,6 +83,7 @@ mod imp {
                     let data_dir = pm.base_dir().clone();
                     let cfm = ContentFilterManager::new(&data_dir);
                     cfm.initialize_filters();
+                    cfm.initialize_scriptlets();
 
                     if self.content_filter_manager.set(cfm).is_err() {
                         log::warn!("Content filter manager already initialized");

@@ -1,0 +1,38 @@
+[
+  {
+    "trigger": {
+      "url-filter": "googlesyndication\\.com"
+    },
+    "action": { "type": "block" }
+  },
+  {
+    "trigger": {
+      "url-filter": "doubleclick\\.net"
+    },
+    "action": { "type": "block" }
+  },
+  {
+    "trigger": {
+      "url-filter": "youtube\\.com/pagead/"
+    },
+    "action": { "type": "block" }
+  },
+  {
+    "trigger": {
+      "url-filter": "youtube\\.com/api/stats/ads"
+    },
+    "action": { "type": "block" }
+  },
+  {
+    "trigger": {
+      "url-filter": "youtube\\.com/get_midroll"
+    },
+    "action": { "type": "block" }
+  },
+  {
+    "trigger": {
+      "url-filter": "youtube\\.com/ptracking"
+    },
+    "action": { "type": "block" }
+  }
+]
